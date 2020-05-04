@@ -11,14 +11,21 @@ public class Client {
 
     public static void main(String args[]) {
         try {
-            // create and initialize the ORB
+            // Instancia um ORB
             ORB orb = ORB.init(args, null);
+
+            // Identifica o serviço "NameService" com o servidor no ORB
             org.omg.CORBA.Object objRef = orb.resolve_initial_references("NameService");
             NamingContextExt ncRef = NamingContextExtHelper.narrow(objRef);
+
+            // Importa todas as funções relativas ao serviço com o nome "ECHO-SERVER"
             Echo href = EchoHelper.narrow(ncRef.resolve_str("ECHO-SERVER"));
 
+            // Executa a função instanciada no servidor
             String hello = href.helloWorldString();
             System.out.println(hello);
+
+            // Lida com exceções
         } catch (InvalidName invalidName) {
             invalidName.printStackTrace();
         } catch (CannotProceed cannotProceed) {
