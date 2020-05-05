@@ -29,14 +29,10 @@ HelloWorld.idl
 
 ```IDL
 
-module HelloWorld {
-
-interface HelloWorld {
-
-string helloWorldString();
-
-};
-
+module EchoApp {
+    interface Echo {
+        string helloWorldString();
+    };
 };
 
 ```
