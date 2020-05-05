@@ -1,5 +1,7 @@
 module EchoApp {
     interface Echo {
+        typedef long n;
         string helloWorldString();
+        long Fibonacci(in n arg);
     };
 };

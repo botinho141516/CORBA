@@ -148,7 +148,7 @@ Windows
 
 ```shell
 
-javac -classpath .;echoapp.jar Server.java EchoServer.java Client.java
+javac -classpath ./echoapp.jar Server.java EchoServer.java Client.java
 
 ```
 
@@ -156,7 +156,7 @@ Linux
 
 ```shell
 
-javac -classpath .:echoapp.jar Server.java EchoServer.java Client.java
+javac -classpath ./echoapp.jar Server.java EchoServer.java Client.java
 
 ```
 

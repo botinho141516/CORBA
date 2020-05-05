@@ -24,6 +24,8 @@ public class Client {
             // Executa a função instanciada no servidor
             String hello = href.helloWorldString();
             System.out.println(hello);
+            int fibonacciValue = href.Fibonacci(43);
+            System.out.println(fibonacciValue);
 
             // Lida com exceções
         } catch (InvalidName invalidName) {
